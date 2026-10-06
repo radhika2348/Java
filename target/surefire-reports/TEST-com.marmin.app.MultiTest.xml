@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" version="3.0.2" name="com.marmin.app.SquareNoTest" time="0.027" tests="6" errors="0" skipped="0" failures="0">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" version="3.0.2" name="com.marmin.app.MultiTest" time="0.006" tests="7" errors="0" skipped="0" failures="0">
   <properties>
     <property name="java.specification.version" value="21"/>
     <property name="sun.jnu.encoding" value="UTF-8"/>
@@ -53,10 +53,11 @@
     <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
     <property name="java.class.version" value="65.0"/>
   </properties>
-  <testcase name="testOneSquare" classname="com.marmin.app.SquareNoTest" time="0.01"/>
-  <testcase name="testNegativeNumber" classname="com.marmin.app.SquareNoTest" time="0.001"/>
-  <testcase name="testPositiveNumber" classname="com.marmin.app.SquareNoTest" time="0.001"/>
-  <testcase name="testSquare" classname="com.marmin.app.SquareNoTest" time="0.0"/>
-  <testcase name="testPositiveNumber1" classname="com.marmin.app.SquareNoTest" time="0.0"/>
-  <testcase name="testPositiveNumber2" classname="com.marmin.app.SquareNoTest" time="0.0"/>
+  <testcase name="testMultiplyNegativeFloat" classname="com.marmin.app.MultiTest" time="0.001"/>
+  <testcase name="testMultiplyNegativeInt" classname="com.marmin.app.MultiTest" time="0.001"/>
+  <testcase name="testMultiplyNegativeDouble" classname="com.marmin.app.MultiTest" time="0.001"/>
+  <testcase name="testMultiplyDouble" classname="com.marmin.app.MultiTest" time="0.001"/>
+  <testcase name="testMultiplyInt" classname="com.marmin.app.MultiTest" time="0.001"/>
+  <testcase name="testMultiplyFloat" classname="com.marmin.app.MultiTest" time="0.001"/>
+  <testcase name="testMultiplyZeroInt" classname="com.marmin.app.MultiTest" time="0.0"/>
 </testsuite>
