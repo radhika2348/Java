@@ -1,46 +1,62 @@
 package com.marmin.app;
 
-import org.junit.jupiter.api.Assertions;
+import static org.junit.jupiter.api.Assertions.*;
 import org.junit.jupiter.api.Test;
+import java.util.Random;
 
 class ScoreTest {
-    public  Score score = new Score();
+    public  Score test = new Score();
+    Random randomGenerator = new Random();
+    int score;
 
     @Test
-    void isPassingGreater() {
+    void testShouldReturnTrueForScoreGreaterThan40() {
+        score = randomGenerator.nextInt(40, Integer.MAX_VALUE);
+
         boolean expected = true;
-        boolean actual = score.isGreaterThan(50);
-        Assertions.assertEquals(expected, actual);
+        boolean actual = test.isGreaterThan(score);
+
+        assertEquals(expected, actual);
     }
 
     @Test
-    void isPassinglesser(){
-        boolean expected=false;
-        boolean actual=score.isGreaterThan(30);
-        Assertions.assertEquals(expected,actual);
+    void testShouldReturnFalseForScoreLessThan40() {
+        score = randomGenerator.nextInt(Integer.MIN_VALUE, 40);
+
+        boolean expected = false;
+        boolean actual = test.isGreaterThan(score);
+
+        assertEquals(expected, actual);
     }
 
     @Test
-    void isPassingEqual(){
-        boolean expected=true;
-        boolean actual=score.isGreaterThan(40);
-        Assertions.assertEquals(expected,actual);
+    void testShouldReturnTrueForScoreExactly40() {
+        score = 40;
+
+        boolean expected = true;
+        boolean actual = test.isGreaterThan(score);
+
+        assertEquals(expected, actual);
     }
 
     @Test
-    void isPassingless(){
-        boolean expected=false;
-        boolean actual=score.isGreaterThan(39);
-        Assertions.assertEquals(expected,actual);
+    void testShouldNotReturnTrueForScoreLessThan40() {
+        score = randomGenerator.nextInt(Integer.MIN_VALUE, 40);
+
+        boolean expected = true;
+        boolean actual = test.isGreaterThan(score);
+
+        assertNotEquals(expected, actual);
     }
 
     @Test
-    void isPassingZero(){
-        boolean expected=false;
-        boolean actual=score.isGreaterThan(0);
-        Assertions.assertEquals(expected,actual);
+    void testShouldNotReturnFalseForScoreGreaterThan40() {
+        score = randomGenerator.nextInt(40, Integer.MAX_VALUE);
+
+        boolean expected = false;
+        boolean actual = test.isGreaterThan(score);
+
+        assertNotEquals(expected, actual);
     }
-
-
 
 }

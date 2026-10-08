@@ -9,7 +9,7 @@ class MultiTest{
 
     @Test
 
-    void testMultiplyInt() {
+    void test35IsMultiplyOf7Int() {
         int expected = 35;
         int actual = test.multiply(5);
         Assertions.assertEquals(expected, actual);
