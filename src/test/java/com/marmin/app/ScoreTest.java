@@ -3,6 +3,7 @@ package com.marmin.app;
 import static org.junit.jupiter.api.Assertions.*;
 import org.junit.jupiter.api.Test;
 import java.util.Random;
+import java.math.*;
 
 class ScoreTest {
     public  Score test = new Score();

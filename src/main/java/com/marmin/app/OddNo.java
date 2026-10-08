@@ -1,0 +1,20 @@
+package com.marmin.app;
+
+class OddNo{
+
+    static int NoOfEvenNumbers(int num){
+        int count=0;
+        
+        
+            for(int i=1;i<=num;i++){
+                if(i%2==0){
+                    count++;
+                }
+            }
+            return count;
+        
+
+        
+        
+    }
+}
